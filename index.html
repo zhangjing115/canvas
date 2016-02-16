@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/shape.js"></script>
+    <script src="js/canvas.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+<img src="" alt="">
+<div class="container">
+    <ul class="menu">
+        <li class="parent hasson">
+            <div data-icon="wenjian"></div>
+            <ul class="son file">
+                <li data-icon="xinjian">新建</li>
+                <li data-icon="fanhui">返回</li>
+                <li data-icon="baocun">保存</li>
+            </ul>
+        </li>
+
+        <li class="parent hasson shapes">
+            <div data-icon="huatu"></div>
+            <ul class="son shapes">
+                <li data-role="line" data-icon="ganbi">线条</li>
+                <li data-role="rect" data-icon="juxing">矩形</li>
+                <li data-role="circle" data-icon="yuan">圆圈</li>
+                <li data-role="pen" data-icon="qianbi">铅笔</li>
+                <li data-role="five" data-icon="wujiaoxing">五角星</li>
+            </ul>
+        </li>
+
+        <li class="parent hasson">
+            <div data-icon="yansexuanze"></div>
+            <ul class="son type">
+                <li data-role="stroke" data-icon="huaxian">画线</li>
+                <li data-role="fill" data-icon="tianchong">填充</li>
+            </ul>
+        </li>
+
+        <li class="parent">
+            <div title="线条的颜色" class="lineColor"><input type="color"></div>
+
+        </li>
+
+        <li class="parent">
+            <div title="填充的颜色" class="fillColor"><input type="color"></div>
+
+        </li>
+
+        <li class="parent hasson">
+            <div data-icon="xiankuang"></div>
+            <ul class="son lineWidth">
+                <li data-role="1" data-icon="xixian">细</li>
+                <li data-role="4" data-icon="zhongxian">中</li>
+                <li data-role="8" data-icon="cuxian">粗</li>
+            </ul>
+        </li>
+
+        <li class="parent hasson">
+            <div data-icon="xianpi"></div>
+            <ul class="son xpsize">
+                <li data-role="8" data-icon="xiaoxiangpi">小</li>
+                <li data-role="16" data-icon="zhongxiangpi">中</li>
+                <li data-role="32" data-icon="daxiangpi">大</li>
+            </ul>
+        </li>
+
+        <li class="parent">
+            <div class="select" data-icon="xuanze"></div>
+        </li>
+    </ul>
+    <div class="box">
+        <div class="copy"></div>
+        <canvas></canvas>
+        <div class="xp"></div>
+        <div class="selectarea"></div>
+    </div>
+</div>
+</body>
+</html>

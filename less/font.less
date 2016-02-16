@@ -1,0 +1,105 @@
+//@@代表引用
+//@a:c;
+//@b:a;
+//@@b;    c
+@font-face{
+  font-family:'demo';
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+@name1:wenjian;
+@name2:fanhui;
+@name3:xinjian;
+@name4:baocun;
+@name5:huatu;
+@name6:tianchongyanse;
+@name7:biankuangyanse;
+@name8:yansexuanze;
+@name9:huaxian;
+@name10:tianchong;
+@name11:xintiaokuangdu;
+@name12:xixian;
+@name13:zhongxian;
+@name14:cuxian;
+@name15:xianpi;
+@name16:xiaoxiangpi;
+@name17:zhongxiangpi;
+@name18:daxiangpi;
+@name19:xuanze;
+@name20:ganbi;
+@name21:juxing;
+@name22:yuan;
+@name23:qianbi;
+@name24:wujiaoxing;
+@name25:xiankuang;
+
+
+
+
+
+@con1:e60b;
+@con2:e607;
+@con3:e605;
+@con4:e617;
+@con6:e60f;
+@con5:e611;
+@con7:f00ca;
+@con8:e60f;   //
+@con9:e603;
+@con10:e606;
+@con11:e62a;   //
+@con12:e603;
+@con13:e60a;
+@con14:e615;
+@con15:e60c;
+@con16:e600;
+@con17:e616;
+@con18:e604;
+@con19:e610;
+@con20:e602;
+@con21:e608;
+@con22:e619;
+@con23:e60d;
+@con24:e60e;
+@con25:e612;
+
+.for(@i:1)when(@i<=25){
+  @n:"name@{i}";
+  @n1:@@n;
+  @c:"con@{i}";
+  @c1:@@c;
+  *[data-icon=@{n1}]:before{
+    content:'\@{c1}';
+    font-family:demo;
+  }
+  *[data-icon=@{n1}][icon-pos=top]:before{
+    display: block;
+    content:'\@{c1}';
+    font-family:demo;
+  }
+  *[data-icon=@{n1}][icon-pos=right]:before{
+    content:'';
+    font-family:demo;
+  }
+  *[data-icon=@{n1}][icon-pos=right]:after{
+    content:'\@{c1}';
+    font-family:demo;
+  }
+  *[data-icon=@{n1}][icon-pos=bottom]:before{
+    content:'';
+    font-family:demo;
+    display: block;
+  }
+  *[data-icon=@{n1}][icon-pos=bottom]:after{
+    content:'\@{c1}';
+    font-family:demo;
+    display: block;
+  }
+  .for(@i+1);
+}
+.for();
+
+
